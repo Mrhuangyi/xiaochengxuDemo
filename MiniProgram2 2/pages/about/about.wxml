@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="userinfo">
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view>
+  <text> \n </text>
+  </view>
+  <view class="weui-cells weui-cells_after-title">
+            <navigator url="../userinfo/userinfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/about/p1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">身份绑定</view>
+              
+            </navigator>
+            <navigator url="../phoneinfo/phoneinfo" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/about/phone.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">手机绑定</view>
+                
+            </navigator>
+        </view>
+        <view>
+  <text> \n </text>
+  </view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="../shiyan/shiyan" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/about/p4.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">帮助</view>
+               
+            </navigator>
+            <navigator url="../advice/advice" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__hd">
+                    <image src="../../images/about/p3.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">意见与反馈</view>
+                
+            </navigator>
+        </view>
+</view>

@@ -1,0 +1,52 @@
+<!--pages/caipin/caipin.wxml-->
+<view class="page">
+<view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">今日菜品</view>
+            <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/cai1.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">鱼香肉丝</view>
+                        <view class="weui-media-box__desc">卡路里含量：884KJ/100g</view>
+                         <view class="weui-media-box__desc">单价：13元/份</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/cai1.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">香干肉丝</view>
+                        <view class="weui-media-box__desc">卡路里含量：677KJ/100g</view>
+                        <view class="weui-media-box__desc">单价：13元/份</view>
+                    </view>
+                </navigator>
+            </view>
+            <view class="weui-panel__bd">
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/cai1.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">鱼香肉丝</view>
+                        <view class="weui-media-box__desc">卡路里含量：884KJ/100g</view>
+                        <view class="weui-media-box__desc">单价：13元/份</view>
+                    </view>
+                </navigator>
+                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                        <image class="weui-media-box__thumb" src="/images/cai1.png" />
+                    </view>
+                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                        <view class="weui-media-box__title">香干肉丝</view>
+                        <view class="weui-media-box__desc">卡路里含量：677KJ/100g</view>
+                        <view class="weui-media-box__desc">单价：13元/份</view>
+                    </view>
+                    
+                </navigator>
+            </view>
+            
+        </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="sfbd1">
+<view class="sfbd">您的信息已提交，已在审核中，请稍后...</view>
+</view>
+<view class="sfbd1">
+<view class="sfbd">您的身份确认成功！</view>
+</view>
+<view class="sfbd1">
+<view class="sfbd">对不起，您的身份不正确，请重新绑定！</view>
+</view>

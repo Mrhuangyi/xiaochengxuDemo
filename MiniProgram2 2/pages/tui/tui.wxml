@@ -1,0 +1,110 @@
+<view class="main-container">
+<view class="desc-container">
+        <image src="http://huangyiblog.com/hongloumeng.jpg"></image>
+        <view class="right">
+            <view class="title">红楼梦
+            </view>
+            <view class="author">作者：[清] 曹雪芹 著/高鹗 续</view>
+            <view class="press">出版社：人民文学出版社</view>
+            <view class="classify1">分类：古典文学</view>
+            <view class="address">地址: 一幢2层13列A面</view>
+            <view class="grade">评分：
+                <view>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                </view>
+                 <text style="margin-top:-1px; margin-left:2px;">9.6</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="desc-container">
+        <image src="http://huangyiblog.com/nahan.jpg"></image>
+        <view class="right">
+            <view class="title">呐喊
+            </view>
+            <view class="author">作者：鲁迅 著</view>
+            <view class="press">出版社：人民文学出版社</view>
+            <view class="classify1">分类：中国文学</view>
+            <view class="address">地址: 一幢2层11列A面</view>
+            <view class="grade">评分：
+                <view>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                </view>
+                 <text style="margin-top:-1px; margin-left:2px;">8.9</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="desc-container">
+        <image src="http://huangyiblog.com/weicheng.jpg"></image>
+        <view class="right">
+            <view class="title">围城
+            </view>
+            <view class="author">作者：钱钟书 著</view>
+            <view class="press">出版社：人民文学出版社</view>
+            <view class="classify1">分类：中国文学</view>
+            <view class="address">地址: 一幢2层14列A面</view>
+            <view class="grade">评分：
+                <view>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+      
+                </view>
+                 <text style="margin-top:-1px; margin-left:2px;">8.9</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="desc-container">
+        <image src="http://huangyiblog.com/sanguo.jpg"></image>
+        <view class="right">
+            <view class="title">三国演义
+            </view>
+            <view class="author">作者：罗贯中 著</view>
+            <view class="press">出版社：人民文学出版社</view>
+            <view class="classify1">分类：古典文学</view>
+            <view class="address">地址: 一幢2层13列A面</view>
+            <view class="grade">评分：
+                <view>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                </view>
+                 <text style="margin-top:-1px; margin-left:2px;">9.2</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="desc-container">
+        <image src="http://huangyiblog.com/jianai.jpg"></image>
+        <view class="right">
+            <view class="title">简爱
+            </view>
+            <view class="author">作者：[英] 夏洛蒂·勃朗特</view>
+            <view class="press">出版社：世界图书出版公司</view>
+            <view class="classify1">分类：外国文学</view>
+            <view class="address">地址: 一幢2层3列B面</view>
+            <view class="grade">评分：
+                <view>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    
+                </view>
+                 <text style="margin-top:-1px; margin-left:2px;">8.5</text>
+            </view>
+        </view>
+    </view>
+</view>

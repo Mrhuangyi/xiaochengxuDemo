@@ -1,0 +1,5 @@
+<view>
+<text>{{usename}}\n</text>
+<text>{{password}}</text>
+</view>
+<button bindtap='bindtap'>test</button>

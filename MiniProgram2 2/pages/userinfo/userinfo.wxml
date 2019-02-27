@@ -1,0 +1,99 @@
+<!--index.wxml-->
+<view class='baseInfo'>
+  <image src='../../images/tittleTag.png'></image>
+  <text>学校信息</text>
+</view>
+<form bindsubmit="formSubmit">
+<view class="weui-cells weui-cells_after-title">
+
+<view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">学校</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindCountryChange" value="{{schools[countryIndex]}}" range="{{schools}}" name="xuexiao" type='text'>
+                        <view class="weui-select weui-select_in-select-after" >{{schools[countryIndex]}}
+                        </view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">学院</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindXueyuanChange" value="{{xueyuan[xueyuanIndex]}}" range="{{xueyuan}}" name="xueyuan" type='text'>
+                        <view class="weui-select weui-select_in-select-after" name="xueyuan" type='text'>{{xueyuan[xueyuanIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">专业</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="bindZhuanyeChange" value="{{zhuanye[zhuanyeIndex]}}" range="{{zhuanye}}" name="zhuanye" type='text'>
+                        <view class="weui-select weui-select_in-select-after" >{{zhuanye[zhuanyeIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+            
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">入学时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange" name="date" type='text'>
+                        <view class="weui-input" name="date" type='text' >{{date}}</view>
+                    </picker>
+                </view>
+            </view>
+            </view>
+            <view class='baseInfo'>
+  <image src='../../images/tittleTag.png'></image>
+  <text>基本信息</text>
+</view>
+             <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">班级</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="banji" type='text' placeholder="请输入班级"/>
+                </view>
+            </view>
+<view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">学号</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="xuehao" type='text' placeholder="请输入学号"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" name="name" type='text' placeholder="请输入姓名"/>
+                </view>
+            </view>
+            </view>
+
+
+<view class="page__bd page__bd_spacing">
+        <button class="weui-btn" form-type='submit' type="primary" >提交信息</button>
+        </view>
+</form>
+
+        <!-- 模态框 -->
+<modal class="modal" title='要提交的信息' hidden="{{modalHidden}}" bindcancel='modalCancel' bindconfirm='modalConfirm'>
+   <view>学校:{{schools[countryIndex]}}</view>
+    <view>学院:{{xueyuan[xueyuanIndex]}}</view>
+    <view>专业:{{zhuanye[zhuanyeIndex]}}</view>
+    <view>入学时间:{{date}}</view>
+    <view>姓名:{{information.name}}</view>
+    <view>班级:{{information.banji}}</view>
+    <view>学号:{{information.xuehao}}</view>
+</modal>
+<!-- /模态框 -->

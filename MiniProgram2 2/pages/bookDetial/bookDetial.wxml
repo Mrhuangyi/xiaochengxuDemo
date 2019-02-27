@@ -1,0 +1,58 @@
+<!--pages/book-detail/book-detail.wxml-->
+<view class="main-container">
+    
+    <!--图书详情-->
+    <view class="desc-container">
+        <image src="http://huangyiblog.com/hongloumeng.jpg"></image>
+        <view class="right">
+            <view class="title">红楼梦
+            </view>
+            <view class="author">作者：[清] 曹雪芹 著/高鹗 续</view>
+            <view class="press">出版社：人民文学出版社</view>
+            <view class="classify1">分类：古典文学</view>
+            <view class="address">索书号: 一幢2层13列A面</view>
+            <view class="grade">评分：
+                <view>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                    <image src="../../images/star_1.png"/>
+                </view>
+                 <text style="margin-top:-1px; margin-left:2px;">9.6</text>
+            </view>
+        </view>
+    </view>
+
+    <!--内容介绍-->
+    <view class="content-container">
+        <text class="title">内容简介</text>
+        <text class="content">
+            《红楼梦》是一部百科全书式的长篇小说。以宝黛爱情悲剧为主线，以四大家族的荣辱兴衰为背景，描绘出18世纪中国封建社会的方方面面，以及封建专制下新兴资本主义民主思想的萌动。结构宏大、情节委婉、细节精致，人物形象栩栩如生，声口毕现，堪称中国古代小说中的经典。
+        </text>
+       
+    </view>
+
+    <!--相关书籍-->
+    <view class="recommended-container">
+        <text class="title">喜欢本书的人还可能喜欢</text>
+        <view class="book">
+            <image src="http://huangyiblog.com/nahan.jpg" bindtap="bookDetailBtn"></image>
+            <image src="http://huangyiblog.com/weicheng.jpg" bindtap="bookDetailBtn" ></image>
+            <image src="http://huangyiblog.com/sanguo.jpg" bindtap="bookDetailBtn"></image>
+        </view>
+        <view class="book">
+            <image src="http://huangyiblog.com/jianai.jpg" bindtap="bookDetailBtn"></image>
+            <image src="http://huangyiblog.com/piao.jpg" bindtap="bookDetailBtn" ></image>
+            <image src="http://huangyiblog.com/biancheng.jpg" bindtap="bookDetailBtn"></image>
+        </view>
+    </view>
+
+    <!--执行操作-->
+    <view class="operate-container">
+        <text class="title">您可以执行的操作</text>
+        <view class="btn btn-left" >借阅本书</view>
+        <view class="disable-btn btn-left" >预订本书</view>
+    </view>
+
+</view>

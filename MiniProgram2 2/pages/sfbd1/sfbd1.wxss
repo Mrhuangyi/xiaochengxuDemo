@@ -1,0 +1,10 @@
+.sfbd{
+  background-color: white;
+  height:8em;
+  text-align: center;
+  line-height: 8em;
+  justify-content: center;
+}
+.sfbd1{
+  margin-top: 20px;
+}

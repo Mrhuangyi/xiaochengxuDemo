@@ -1,0 +1,25 @@
+<view style="margin-top:50rpx">
+   <view style="display:flex;">
+    <navigator url="../kong/kong" class="gongneng">
+                    <image src="../../images/about/p1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                <view class="weui-cell__bd">查看空座位</view>
+            </navigator>
+                            <navigator url="../recognize/recognize" class="gongneng" style="margin-left:60rpx">
+                    <image src="../../images/about/p1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                <view class="weui-cell__bd">生僻字识别</view>
+            </navigator>
+  </view>
+</view>
+
+<view style="margin-top:50rpx">
+   <view style="display:flex;">
+    <navigator url="../book/book" class="gongneng">
+                    <image src="../../images/about/p1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                <view class="weui-cell__bd">语音查找书籍</view>
+            </navigator>
+                            <navigator url="../tui/tui" class="gongneng" style="margin-left:60rpx">
+                    <image src="../../images/about/p1.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                <view class="weui-cell__bd">个性化推荐</view>
+            </navigator>
+  </view>
+</view>

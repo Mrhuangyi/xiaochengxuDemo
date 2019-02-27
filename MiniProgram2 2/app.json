@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/about/about",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/function/function",
+    "pages/phoneinfo/phoneinfo",
+    "pages/userinfo/userinfo",
+    "pages/advice/advice",
+    "pages/sfbd1/sfbd1",
+    "pages/help/help",
+    "pages/advice/msg_success",
+    "pages/shiyan/shiyan",
+    "pages/gongneng/gongneng",
+    "pages/kong/kong",
+    "pages/book/book",
+    "pages/tui/tui",
+    "pages/recognize/recognize",
+    "pages/renliu/renliu",
+    "pages/caipin/caipin",
+    "pages/bookDetial/bookDetial"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#56abe4",
+    "backgroundColor": "#ddd",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/tabbar/function1.png",
+        "selectedIconPath": "images/tabbar/function2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "images/tabbar/about1.png",
+        "selectedIconPath": "images/tabbar/about2.png",
+        "text": "关于我"
+      }
+    ],
+    "position": "bottom"
+  }
+}
