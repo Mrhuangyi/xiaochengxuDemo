@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.sys.BookMapper">
+	
+	<sql id="columns">
+		book_id AS "bookID",
+		book_name AS "name",
+		sort AS "sort",
+		author AS "author",
+		location AS "location",
+		press AS "press",
+		img  AS  "img",
+		synopsis AS "synopsis"
+	</sql>
+	
+	<select id="get" parameterType="com.model.sys.Book" resultType="com.model.sys.Book">
+		select 
+			<include refid="columns" />
+		from book
+		<where>
+			<if test="name != null and name !=''">
+				book_name = #{name}
+			</if>
+		</where>
+	</select>
+	
+	<select id="getCount" parameterType="com.model.sys.Book" resultType="Long">
+		select count(book_id)
+		from book
+	</select>
+	
+	
+	
+
+	
+	
+	
+	
+
+	
+	
+
+</mapper>

@@ -1,7 +1,11 @@
 
 <view class="container">
-<view class="img_wrap">
-    <image src="{{ img }}" mode='aspectFit'/>
+    <view class="img_wrap">
+        <image src="{{ img }}" mode='aspectFit'/>
+    </view>
+    <button bindtap="uploads" class="up">拍照/选取图片</button>
 </view>
-<button bindtap="uploads" class="up">拍照/选取图片</button>
- </view>
+<view style='font-size:26px'>识别结果: </view>
+<textarea style='margin-left:50px;border:5px dashed black;text-align:left'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{orcText}}</text>
+</textarea> 

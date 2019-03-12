@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <typeAlias alias="Admin" type="com.model.sys.Admin"/>
+        <typeAlias alias="Menu" type="com.model.sys.Menu"/>
+        <typeAlias alias="Student" type="com.model.sys.Student"/> 
+        <typeAlias alias="Book" type="com.model.sys.Book"/>
+        <typeAlias alias="Staff" type="com.model.sys.Staff"/>
+    </typeAliases>
+    <mappers>
+    	<mapper resource="com/mapper/sys/adminMapper.xml" />
+        <mapper resource="com/mapper/sys/menuMapper.xml" />
+        <mapper resource="com/mapper/sys/stuMapper.xml" />
+         <mapper resource="com/mapper/sys/bookMapper.xml" />
+         <mapper resource="com/mapper/sys/staffMapper.xml" />
+    </mappers>
+</configuration>

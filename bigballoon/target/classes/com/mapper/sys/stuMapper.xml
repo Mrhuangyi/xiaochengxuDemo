@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.sys.StudentMapper">
+	
+	<sql id="columns">
+		stu.stu_id AS "stuID",
+		stu.name AS "name",
+		stu.gender AS "gender",
+		stu.university AS "university",
+		stu.college AS "college",
+		stu.major AS "major",
+		stu.stu_class AS "stuClass",
+		stu.entry_date AS "entryDate",
+		stu.phone AS "phone"
+	</sql>
+	
+	<select id="get" parameterType="com.model.sys.Student" resultType="com.model.sys.Student">
+		select 
+			<include refid="columns" />
+		from student stu
+		<where>
+			<if test="stuID != null and stuID != ''">
+				 stu.stu_id = #{stuID}
+			</if>
+		</where>
+	</select>
+	
+	
+	<select id="getCount" parameterType="com.model.sys.Student" resultType="Long">
+		select count(stu_id)
+		from student
+	</select>
+	
+	<select id="getCountByGrade" resultMap="GradeInfo">
+		select count(1) num from student group by year(entry_date); 
+	</select>
+	
+	<resultMap id="GradeInfo" type="Map">
+		<result column="num" property="num" jdbcType="INTEGER" />
+	</resultMap>
+	
+	<select id="getIdNum" parameterType="com.model.sys.Student" resultType="Long">
+		select count(1)
+		from student stu
+		<where>
+			<if test="stuID != null and stuID != ''">
+				stu.stu_id = #{stuID}
+			</if>
+		</where>
+	</select>
+	
+	<select id="getListByPage" resultType="com.model.sys.Student" parameterType="com.model.sys.Student">
+		<if test="dbName == 'mysql'">
+			select
+				<include refid="columns"/>
+			from student stu
+			LIMIT #{start},#{limit}
+		</if>
+	</select>
+	
+	<select id="insert">
+		INSERT INTO student (
+			stu_id,name,gender,university,college,major,stu_class,entry_date,phone
+		)VALUES (
+			#{stuID},#{name},#{gender},#{university},#{college},#{major},#{stuClass},#{entryDate},#{phone}   
+		)
+	</select>
+	
+	<update id="update">
+		UPDATE student SET
+			<if test="stuID != null and stuID != '' ">stu_id = #{stuID},</if>
+			<if test="name != null and name != '' ">name = #{name},</if>
+			<if test="gender != null and gender != '' ">gender = #{gender},</if>
+			<if test="university != null and university != '' ">university = #{university},</if>
+			<if test="college != null and college != '' ">college = #{college},</if>
+			<if test="major != null and major != '' ">major = #{major},</if>
+			<if test="stuClass != null and stuClass != '' ">stu_class = #{stuClass},</if>
+			<if test="entryDate != null and entryDate != '' ">entry_date = #{entryDate},</if>
+			<if test="phone != null and phone != '' ">phone = #{phone}</if>
+			WHERE stu_id = #{stuID}
+	</update>
+	
+	
+	<delete id="delete" parameterType="java.lang.String">
+		delete from student
+		where stu_id = #{stuID,jdbcType=VARCHAR}
+	</delete>
+	
+	
+
+</mapper>

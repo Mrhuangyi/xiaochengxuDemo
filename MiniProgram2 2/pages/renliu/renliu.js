@@ -2,8 +2,12 @@ Page({
 
   data: {
     show: false,//控制下拉列表的显示隐藏，false隐藏、true显示
-    selectData: ['一楼', '二楼', '三楼'],//下拉列表的数据
-    index: 0//选择的下拉列表下标
+    selectData: ['A窗口', 'B窗口', 'C窗口','D窗口'],//下拉列表的数据
+    index: 0,//选择的下拉列表下标
+    NumA:"",
+    NumB:"",
+    NumC:"",
+    NumD:""
   },
   // 点击下拉显示框
   selectTap() {
@@ -19,8 +23,21 @@ Page({
       show: !this.data.show
     });
   },
-  onLoad: function (options) {
 
+  onLoad: function (options) {
+    var that = this
+    wx.request({
+      url: 'http://192.168.1.101:8080/bigballoon/ai/bodyNum.do',
+      success:function(res){
+        console.log(res.data)
+        that.setData({
+          NumA: res.data[0],
+          NumB: res.data[1],
+          NumC: res.data[2],
+          NumD: res.data[3],
+        })
+      }
+    })
   }
 
 })

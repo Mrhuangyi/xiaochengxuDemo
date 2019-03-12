@@ -6,8 +6,8 @@
     <block wx:if="{{cancel}}">
       <icon class="icon-cancel" bindtap="clearInput" type="clear" size="18" color="#eee" />
     </block>
-    <navigator url="../bookDetial/bookDetial" >
-    <button class="search-btn" formType="submit">搜索</button>
+    <navigator url="../bookDetial/bookDetial?name={{inputValue}}" >
+        <button class="search-btn" formType="submit" value="{{inputValue}}" >搜索</button>
     </navigator>
   </view>
 </form>

@@ -1,5 +1,11 @@
-<view style="display:flex;">
-<view class='aa'>请选择阅览室：</view>
+<view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">图书馆1</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">图书馆2</view>
+    <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">图书馆3</view>
+</view>
+
+<swiper current="{{currentTab}}">
+<swiper-item >
 <view class='select_box'>
     <view class='select' catchtap='selectTap'>
         <text class='select_text'>{{selectData[index]}}</text>
@@ -8,9 +14,42 @@
         <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
     </view>
 </view>
+<view class='xx'>
+        <view hidden="{{index != 0}}">
+        <image src="http://huangyiblog.com/yuelanshi1.jpg"></image>
+        </view>
+        <view hidden="{{index != 1}}"><image src="http://huangyiblog.com/yuelanshi2.jpg"></image></view>
+        <view hidden="{{index != 2}}"><image src="http://huangyiblog.com/yuelanshi3.jpg"></image></view>
+</view>
+</swiper-item>
+    <swiper-item><view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData[index]}}</text>
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
 </view>
 <view class='xx'>
         <view hidden="{{index != 0}}">阅览室1的内容</view>
         <view hidden="{{index != 1}}">阅览室2的内容</view>
         <view hidden="{{index != 2}}">阅览室3的内容</view>
 </view>
+</swiper-item>
+    <swiper-item><view class='select_box'>
+    <view class='select' catchtap='selectTap'>
+        <text class='select_text'>{{selectData[index]}}</text>
+    </view>
+    <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+        <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+    </view>
+</view>
+<view class='xx'>
+        <view hidden="{{index != 0}}">阅览室1的内容</view>
+        <view hidden="{{index != 1}}">阅览室2的内容</view>
+        <view hidden="{{index != 2}}">阅览室3的内容</view>
+</view>
+</swiper-item>
+</swiper>
+
+

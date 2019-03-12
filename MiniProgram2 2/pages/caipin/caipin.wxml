@@ -1,52 +1,27 @@
 <!--pages/caipin/caipin.wxml-->
 <view class="page">
-<view class="weui-panel weui-panel_access">
-            <view class="weui-panel__hd">今日菜品</view>
+  <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd" style='font-size:26px'>今日菜品</view>
+        <view wx:for='{{dishMenu}}'>
             <view class="weui-panel__bd">
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="/images/cai1.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">鱼香肉丝</view>
-                        <view class="weui-media-box__desc">卡路里含量：884KJ/100g</view>
-                         <view class="weui-media-box__desc">单价：13元/份</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="/images/cai1.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">香干肉丝</view>
-                        <view class="weui-media-box__desc">卡路里含量：677KJ/100g</view>
-                        <view class="weui-media-box__desc">单价：13元/份</view>
-                    </view>
-                </navigator>
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg" >
+                    <image class="weui-media-box__thumb" src="http://192.168.43.124:8080/bigballoon/{{item.imgUrl}}" style='margin-left:90px;width:200px;height:180px;margin-top:5px' />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                     <view class="weui-media-box__title"style='font-size:20px;margin-top:125px;margin-left:150px;'>{{item.name}}</view>
+                     <view class="weui-media-box__desc" style='font-size:20px;margin-left:150px;x'>{{item.calorie}}KJ/100g</view>
+                </view>
             </view>
-            <view class="weui-panel__bd">
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="/images/cai1.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">鱼香肉丝</view>
-                        <view class="weui-media-box__desc">卡路里含量：884KJ/100g</view>
-                        <view class="weui-media-box__desc">单价：13元/份</view>
-                    </view>
-                </navigator>
-                <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-                    <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-                        <image class="weui-media-box__thumb" src="/images/cai1.png" />
-                    </view>
-                    <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-                        <view class="weui-media-box__title">香干肉丝</view>
-                        <view class="weui-media-box__desc">卡路里含量：677KJ/100g</view>
-                        <view class="weui-media-box__desc">单价：13元/份</view>
-                    </view>
-                    
-                </navigator>
-            </view>
-            
         </view>
+
+        <view class="weui-panel__ft">
+              <view class="weui-cell weui-cell_access weui-cell_link">
+                    <view class="weui-cell__bd" style='margin-left:125px'>等待菜品添加</view>
+              </view>
+        </view> 
+  </view>
 </view>
+
+
+
+

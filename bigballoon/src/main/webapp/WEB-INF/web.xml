@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <welcome-file-list>
+    <welcome-file>/login/index.do</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+  <listener>
+    <description>log4j配置加载器</description>
+    <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+  </listener>
+  <servlet>
+    <servlet-name>springMVC</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring-mvc.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <servlet-mapping>
+    <servlet-name>springMVC</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <context-param>
+    <param-name>log4jConfigLocation</param-name>
+    <param-value>classpath:log4j.properties</param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+  </listener>
+  <filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- 配置登陆过滤器 -->
+	<filter>
+	  <filter-name>login</filter-name>
+	  <filter-class>com.filter.LoginFilter</filter-class>
+	  <init-param>
+            <param-name>excludedPages</param-name>
+            <param-value>/res/*</param-value><!-- 匹配不做拦截的请求声明-->
+        </init-param>
+      
+	 </filter>
+	 <filter-mapping>
+	  <filter-name>login</filter-name>
+	  <url-pattern>*.do</url-pattern>
+	 <!--  <url-pattern>/menu/*</url-pattern>
+	  <url-pattern>/role/*</url-pattern>
+	  <url-pattern>/user/*</url-pattern>
+	  <url-pattern>/friendLink/*</url-pattern> -->
+	</filter-mapping>
+
+  <!-- 连接池 启用 Web 监控统计功能    start-->  
+  <filter>
+     <filter-name>DruidWebStatFilter</filter-name>
+     <filter-class>com.alibaba.druid.support.http.WebStatFilter</filter-class>
+     <init-param >
+         <param-name>exclusions</param-name >
+         <param-value>*. js ,*. gif ,*. jpg ,*. png ,*. css ,*. ico ,/ druid /*</param-value>
+     </init-param>
+  </filter>
+  <filter-mapping>
+     <filter-name>DruidWebStatFilter</filter-name>
+     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+     <servlet-name>DruidStatView</servlet-name>
+     <servlet-class>com.alibaba.druid.support.http.StatViewServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+     <servlet-name>DruidStatView</servlet-name>
+     <url-pattern>/druid/*</url-pattern>
+  </servlet-mapping>
+  <!-- 连接池 启用 Web 监控统计功能    end-->
+  
+  <!-- ckfinder配置 start -->
+  <servlet>
+		<servlet-name>ConnectorServlet</servlet-name>
+		<servlet-class>com.ckfinder.connector.ConnectorServlet</servlet-class>
+		<init-param>
+			<description>
+				Path to configuration file can be relative path inside application,
+				absolute path on local file system or UNC path.
+			</description>
+			<param-name>XMLConfig</param-name>
+			<param-value>/WEB-INF/ckfinder.xml</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ConnectorServlet</servlet-name>
+		<url-pattern>
+			/res/ckfinder/core/connector/java/connector.java
+		</url-pattern>
+	</servlet-mapping>
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<!-- ckfinder配置 end -->
+
+</web-app>

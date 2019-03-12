@@ -43,9 +43,9 @@ Page({
       console.log(res)
       console.log(res.tempFilePath)
       wx.uploadFile({
-        url: 'http://172.19.0.194:8080/bigballoon/ai/speechRecognition.do',
+        url: 'http://192.168.1.101:8080/bigballoon/ai/speechRecognition.do',
         filePath: res.tempFilePath,
-        name: 'file',
+        name: 'speechFile',
         success: function (res) {
           console.log(res.data);
           that.setData({
@@ -58,8 +58,6 @@ Page({
       })
     }
     );
-    
-
   },
 
   longPress: function () {
@@ -112,39 +110,6 @@ Page({
       }, 1000)
       return false;
     }
-  },
-
-  search: function (keyword) {
-    wx.showToast({
-      title: '搜索中',
-      icon: 'loading',
-      duration: 10000
-    })
-
-    hotapp.request({
-      url: 'http://api.diviniti.cn/jmu/library/search/' + keyword + '/page/1/count/20',
-      success: function (res) {
-        wx.hideToast()
-        app.globalData.searchResult = res.data;
-
-        wx.navigateTo({
-          url: '../result/result?keyword=' + keyword
-        })
-      },
-      fail: function () {
-        wx.showToast({
-          title: '连接失败',
-          icon: 'success',
-          duration: 5000
-        })
-        setTimeout(function () {
-          wx.hideToast()
-        }, 2000)
-      },
-      complete: function () {
-
-      }
-    })
   },
 
   //input清除按钮显示
